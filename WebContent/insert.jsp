@@ -5,6 +5,9 @@
 <%@ page import="java.util.List" %>
     
 <%
+	
+	request.setCharacterEncoding("UTF-8"); //POST일때 한글 깨짐 방지
+	
 	//파라미터에서 꺼내기
 	String name = request.getParameter("name");
 	String hp = request.getParameter("hp");
@@ -25,6 +28,7 @@
 	
 	System.out.println(personList.toString());
 	
+	response.sendRedirect("./list.jsp");
 	
 	/*
 	System.out.println(name);
@@ -47,32 +51,13 @@
 	<p>입력한 정보 내역입니다.</p>
 	
 	
-	<%
-		for(int i=0; i<personList.size(); i++) {
-	%>
-		
-			<table border="">
+
+	
+	
 			
-			<tr>
-				<td>이름</td>
-				<td><%=personList.get(i).getName()%></td>
-			</tr>
-			
-			<tr>
-				<td>핸드폰</td>
-				<td><%=personList.get(i).getHp()%></td>
-			</tr>
-			
-			<tr>
-				<td>회사</td>
-				<td><%=personList.get(i).getCompany()%></td>
-			</tr>
-			
-		</table>
-		<br>
-			
-	<% 
-		}
-	%>
+
+	
+	
+	
 </body>
 </html>
