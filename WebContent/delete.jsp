@@ -20,14 +20,4 @@
 
 %> 
 
-    
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-
-</body>
-</html>
+<!-- html 태그 필요없음 -->
